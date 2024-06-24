@@ -27,7 +27,7 @@ Dependencies are managed using Poetry. The main dependencies are:
 4. Run the application: `poetry run python ./app.py &`
 
 - The backend will be running on http://0.0.0.0:8000
-- Frontend on: http://0.0.0.0:8000/usage
+- Endpoint on: http://0.0.0.0:8000/usage
 
 ## Frontend Dependencies
 Dependencies are managed using npm. The main dependencies are:
@@ -41,9 +41,9 @@ Dependencies are managed using npm. The main dependencies are:
 - Babel
 
 ## Frontend Setup
-1. Navigate to the client directory: cd client
-2. Install dependencies: npm install
-3. Run the application: npm start
+1. Navigate to the client directory: `cd client`
+2. Install dependencies: `npm install`
+3. Run the application: `npm start`
 
 - The frontend will be running on http://0.0.0.0:3000.
 - Dashboard on http://localhost:3000/dashboard
@@ -52,13 +52,13 @@ Dependencies are managed using npm. The main dependencies are:
 
 ## Backend
 To run tests for the backend:
-1. Navigate to the server directory: cd server
-2. Run the tests: poetry run pytest 
+1. Navigate to the server directory: `cd server`
+2. Run the tests: `poetry run pytest`
 
 ## Frontend
 To run tests for the frontend: 
-1. Navigate to the client directory: cd client
-2. Run the tests: npm test
+1. Navigate to the client directory: `cd client`
+2. Run the tests: `npm test`
 
 ## Rational
 The decisions made for this project were dictated mostly by personal preferences, task requirements and time limitations.
