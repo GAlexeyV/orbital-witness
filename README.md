@@ -2,33 +2,13 @@
 
 ## Overview
 This is a web application build with a FastAPI backend and a React frontend. The backend handles API requests, 
-while the frontend provides a user interface for interacting with the application. On the server side app makes requests
-to the following endpoints:
-Get raw message data for the current billing period:
-https://owpublic.blob.core.windows.net/tech-task/messages/current-period
-Get the name and cost of a report by ID
-https://owpublic.blob.core.windows.net/tech-task/reports/:id
-
-After receiving data it makes necessary data calculations / transformations and exposes an endpoint /usage/. 
-This endpoint could be called with GET request, returned JSON has the following shape:
-{
-    usage: [
-    { 
-     message_id: number
-     timestamp: string
-     report_name?: string
-     credits_used: number
-        }
-    ]
-}
-
-Frontend calls this API and visualises data using Bar Chart and Table.
+while the frontend provides a user interface for interacting with the application.
 
 ## Running the app with Docker Compose
-Navigate to a root folder and execute: docker-compose up --build
+Navigate to a root folder and execute: `docker-compose up --build`
 
-Backend endpoint could be accessed on: http://0.0.0.0:8000/usage
-Frontend could be accessed on: http://localhost:3000/dashboard
+- Backend endpoint could be accessed on: http://0.0.0.0:8000/usage
+- Frontend could be accessed on: http://localhost:3000/dashboard
 
 ## Backend Dependencies
 Dependencies are managed using Poetry. The main dependencies are:
@@ -41,13 +21,13 @@ Dependencies are managed using Poetry. The main dependencies are:
 - Pytest-asyncio
 
 ## Running the Backend
-1. Navigate to a server folder: cd server
-2. Optional: create and activate virtual environment. Create: python3 -m venv <myenvname>. Activate: source <myenvname>/bin/activate
-3. Install dependencies: poetry install
-4. Run the application: poetry run python ./app.py &
+1. Navigate to a server folder: `cd server`
+2. Optional: create and activate virtual environment. Create: `python3 -m venv <myenvname>`. Activate: `source <myenvname>/bin/activate`
+3. Install dependencies: `poetry install`
+4. Run the application: `poetry run python ./app.py &`
 
-The backend will be running on http://0.0.0.0:8000
-Endpoint on: http://0.0.0.0:8000/usage
+- The backend will be running on http://0.0.0.0:8000
+- Frontend on: http://0.0.0.0:8000/usage
 
 ## Frontend Dependencies
 Dependencies are managed using npm. The main dependencies are:
@@ -65,8 +45,8 @@ Dependencies are managed using npm. The main dependencies are:
 2. Install dependencies: npm install
 3. Run the application: npm start
 
-The frontend will be running on http://0.0.0.0:3000.
-Dashboard on http://localhost:3000/dashboard
+- The frontend will be running on http://0.0.0.0:3000.
+- Dashboard on http://localhost:3000/dashboard
 
 ## Testing
 
